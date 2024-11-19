@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+/* App.css */
+
+/* General body styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+
+
+h1, h2 {
+  text-align: center;
+  color: #333;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+button {
+  background-color: #007bff; 
   color: white;
+  border: none;
+  padding: 8px 16px;
+  margin: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #0056b3; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  align-self: center;
+}
+
+
+@media (max-width: 600px) {
+  .card {
+    padding: 15px;
   }
-  to {
-    transform: rotate(360deg);
+
+  table th,
+  table td {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  button {
+    padding: 6px 10px;
+  }
+
+  h1, h2 {
+    font-size: 20px;
+  }
+}
+
+button.delete-btn:hover {
+  background-color: #a71d2a; 
+}
+
+@media (max-width: 600px) {
+
+  button {
+    padding: 6px 12px;
+  }
+
+  .actions {
+    flex-wrap: wrap;
+    gap: 5px;
   }
 }
